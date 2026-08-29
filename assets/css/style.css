@@ -443,7 +443,7 @@ body {
   padding: 32px 24px;
 }
 
-.thankyou-card { max-width: 480px; }
+.thankyou-card { max-width: 560px; }
 
 .thankyou-icon { font-size: 48px; margin-bottom: 20px; }
 
@@ -459,3 +459,16 @@ body {
 }
 
 .thankyou-steps li { margin-bottom: 10px; font-size: 14px; color: var(--text-muted); }
+
+.thankyou-booking-title { font-size: clamp(20px, 5vw, 26px); margin-bottom: 12px; }
+
+.thankyou-booking {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 20px 0 28px;
+  min-height: 650px;
+}
+
+.thankyou-booking iframe { min-height: 650px; }
