@@ -13,7 +13,7 @@ declare(strict_types=1);
 // Configuración — edita estos valores si cambian los datos de contacto.
 // ---------------------------------------------------------------------
 const TO_EMAIL   = 'info@labs24kfranquicias.com';
-const FROM_EMAIL = 'no-reply@labs24kfranquicias.com'; // debe ser un buzón del propio dominio
+const FROM_EMAIL = 'info@labs24kfranquicias.com'; // debe ser un buzón del propio dominio
 const FROM_NAME  = 'Labs24k Franquicias — Web';
 const SITE_NAME  = 'Labs24k Franquicias';
 const HOME_URL   = '../index.html';
