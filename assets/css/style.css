@@ -1076,6 +1076,24 @@ input[type="range"]{
   margin-top:5px;
 }
 
+.hp-field{
+  position:absolute;
+  left:-9999px;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+.form-error{
+  background:rgba(255,59,48,.1);
+  border:1px solid rgba(255,59,48,.35);
+  color:#ff8f88;
+  border-radius:var(--radius-sm);
+  padding:14px 16px;
+  font-size:.86rem;
+  margin-bottom:20px;
+}
+
 .form-note{
   font-size:.72rem;
   line-height:1.6;

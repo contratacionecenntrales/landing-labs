@@ -254,16 +254,36 @@
 
       const submitBtn = form.querySelector('button[type="submit"]');
       const label = submitBtn.querySelector('.btn-label');
+      const formError = document.getElementById('form-error');
+
       submitBtn.disabled = true;
       label.textContent = 'Enviando...';
+      if (formError) formError.hidden = true;
 
-      /* Simulated submission — replace with a real endpoint integration. */
-      window.setTimeout(() => {
-        form.hidden = true;
-        successPanel.hidden = false;
-        successPanel.setAttribute('tabindex', '-1');
-        successPanel.focus();
-      }, 900);
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'X-Requested-With': 'XMLHttpRequest' }
+      })
+        .then(res => res.json().catch(() => ({ success: false, message: 'Respuesta inesperada del servidor.' })))
+        .then(data => {
+          if (data.success) {
+            form.hidden = true;
+            successPanel.hidden = false;
+            successPanel.setAttribute('tabindex', '-1');
+            successPanel.focus();
+          } else {
+            throw new Error(data.message || 'No se ha podido enviar la solicitud.');
+          }
+        })
+        .catch(err => {
+          if (formError) {
+            formError.textContent = err.message || 'No se ha podido enviar la solicitud. Inténtalo de nuevo en unos minutos.';
+            formError.hidden = false;
+          }
+          submitBtn.disabled = false;
+          label.textContent = 'Enviar solicitud de zona';
+        });
     });
   }
 

@@ -783,11 +783,18 @@
       </div>
 
       <div class="admision-form-wrap reveal">
-        <form class="admision-form" id="admision-form" novalidate>
+        <form class="admision-form" id="admision-form" action="api/enviar-solicitud.php" method="POST" novalidate>
           <div class="form-header">
             <h3>Solicitud de exclusividad de zona</h3>
             <p>Cualificación para socio estratégico Labs24k</p>
           </div>
+
+          <div class="hp-field" aria-hidden="true">
+            <label for="sitio_web">No rellenar este campo</label>
+            <input type="text" id="sitio_web" name="sitio_web" tabindex="-1" autocomplete="off">
+          </div>
+
+          <p class="form-error" id="form-error" role="alert" hidden></p>
 
           <div class="field">
             <label for="nombre">Nombre y apellidos</label>
