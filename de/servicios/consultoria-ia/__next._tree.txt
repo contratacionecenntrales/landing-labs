@@ -1,0 +1,4 @@
+:HL["/_next/static/chunks/1edf0rcjw2u6v.css","style"]
+:HL["/_next/static/chunks/0ee7xdde47vpd.css","style"]
+:HL["/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"locale","param":{"type":"d","key":"de","siblings":["aviso-legal","blog","cookies","privacidad","servicios"]},"prefetchHints":4208,"slots":{"children":{"name":"servicios","param":null,"prefetchHints":4192,"slots":{"children":{"name":"slug","param":{"type":"d","key":"consultoria-ia","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}}}},"staleTime":300,"buildId":"dQS2tvt3iL35eyrGzla8X"}
